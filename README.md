@@ -13,5 +13,5 @@ Hi!! Welcome!
 ### 5.1 Navigate the terminal to the frontend folder and enter the command: yarn start
 ### 5.2 ### 5.1 Navigate the terminal to the backend folder and enter the command: yarn start
 
-Here are things you need to add to deploy this online: 
-Add a file: .gitignore
+# 2 Here are things you need to add to deploy this online: 
+## Add a file: .gitignore
