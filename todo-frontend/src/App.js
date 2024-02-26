@@ -13,7 +13,7 @@ const App = () => {
 
     const fetchTasks = async () => {
         try {
-            const response = await axios.get('https://tranquil-wildwood-54321-d6b7d1300d99.herokuapp.com/api/tasks');
+            const response = await axios.get('http://localhost:5000/api/tasks');
             setTasks(response.data);
         } catch (error) {
             console.error('Error fetching tasks:', error);
@@ -22,7 +22,7 @@ const App = () => {
 
     const addTask = async (description) => {
         try {
-            const response = await axios.post('https://tranquil-wildwood-54321-d6b7d1300d99.herokuapp.com/api/tasks', { description });
+            const response = await axios.post('http://localhost:5000/api/tasks', { description });
             setTasks([...tasks, response.data]);
         } catch (error) {
             console.error('Error adding task:', error);
@@ -31,7 +31,7 @@ const App = () => {
 
     const toggleTask = async (id) => {
         try {
-            await axios.patch(`https://tranquil-wildwood-54321-d6b7d1300d99.herokuapp.com/api/tasks/${id}`);
+            await axios.patch(`http://localhost:5000/api/tasks/${id}`);
             setTasks(tasks.map(task => task._id === id ? { ...task, isCompleted: !task.isCompleted } : task));
         } catch (error) {
             console.error('Error toggling task:', error);
@@ -40,7 +40,7 @@ const App = () => {
 
     const deleteTask = async (id) => {
         try {
-            await axios.delete(`https://tranquil-wildwood-54321-d6b7d1300d99.herokuapp.com/api/tasks/${id}`);
+            await axios.delete(`http://localhost:5000/api/tasks/${id}`);
             setTasks(tasks.filter(task => task._id !== id));
         } catch (error) {
             console.error('Error deleting task:', error);
