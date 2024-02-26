@@ -3,6 +3,9 @@
 ## Database Configuration
 
 1. **Environment File**: Add a `.env` file to link your app to a database.
+   - Inside '/todo-backend/'
+   - create a new file name '.env' (it has no name, the extension is '.env') using txt
+   - Put MONGODB_URI= your mongodb uri
    - **MongoDB Connection**: Include your MongoDB connect string. If unsure how to do this, refer to the "MongoDB connect" video for guidance.
 
 ## Installing Dependencies
